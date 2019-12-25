@@ -1,3 +1,54 @@
 :root {
     font-family: 'Quicksand', sans-serif;
 }
+
+
+
+.whole-page {
+    display:flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display:flex;
+    flex-direction:row;
+    height:30px;
+    width:100%;
+    text-align: center;
+    background-color: red;
+}
+
+#nav1 {
+    background-color: blue;
+    flex-basis:33%;
+}
+#nav2 {
+    background-color: yellow;
+    flex-basis:34%;
+}
+#nav3 {
+    background-color: green;
+    flex-basis:33%;
+}
+
+.links-header {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-around;
+    flex-basis: 100px;
+    width:100%;
+    text-align: center;
+}
+
+#link1 {
+    background-color: purple;
+    flex-basis:33%;
+}
+#link2 {
+    background-color: orange;
+    flex-basis:34%;
+}
+#link3 {
+    background-color: cyan;
+    flex-basis:33%;
+}
