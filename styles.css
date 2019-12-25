@@ -24,6 +24,10 @@ time, mark, audio, video {
     scroll-behavior: smooth;
 }
 
+* {
+    background-color: hsla(0,0,10%,0.2);
+}
+
 .hidden {
     height: 0px;
     width:0px;
@@ -135,5 +139,5 @@ time, mark, audio, video {
     width:100%;
     text-align: center;
     color: #DBE9EE;
-    background-color: #166088;
+    background-color: #997E72;
 }
