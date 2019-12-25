@@ -2,7 +2,10 @@
     font-family: 'Quicksand', sans-serif;
 }
 
-
+* {
+    background:hsla(0,0%,0%,0.04);
+    border: 0.05px solid hsla(0,0%,0%,0.25);
+  }
 
 .whole-page {
     display:flex;
@@ -15,19 +18,15 @@
     height:30px;
     width:100%;
     text-align: center;
-    background-color: red;
 }
 
 #nav1 {
-    background-color: blue;
     flex-basis:33%;
 }
 #nav2 {
-    background-color: yellow;
     flex-basis:34%;
 }
 #nav3 {
-    background-color: green;
     flex-basis:33%;
 }
 
@@ -41,14 +40,11 @@
 }
 
 #link1 {
-    background-color: purple;
     flex-basis:33%;
 }
 #link2 {
-    background-color: orange;
     flex-basis:34%;
 }
 #link3 {
-    background-color: cyan;
     flex-basis:33%;
 }
