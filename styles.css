@@ -23,10 +23,6 @@ time, mark, audio, video {
     font-family: 'Quicksand', sans-serif;
 }
 
-* {
-    background:hsla(0,0%,0%,0.04);
-  }
-
 .navbar {
     position:fixed;
     display:flex;
@@ -36,7 +32,10 @@ time, mark, audio, video {
     text-align: center;
     top:0;
     left:0;
-    background-color: #7395AE;
+    font-size: 20px;
+    color: #DBE9EE;
+    background-color: #166088;
+    z-index:1;
 }
 
 .nav-item {
@@ -44,7 +43,7 @@ time, mark, audio, video {
     flex-direction: row;
     flex-basis:100%;
     justify-content: space-around;
-    margin:auto;
+    align-items: center;
     width: 100%;
     height:100%;
 }
@@ -54,6 +53,7 @@ time, mark, audio, video {
     flex-direction: column;
     margin-top:35px;
     position:relative;
+    background-color: #DBE9EE;
 }
 
 .links-header {
@@ -72,6 +72,18 @@ time, mark, audio, video {
     justify-content: space-around;
     width: 100%;
     height:100%;
+    transition: all 0.6s;
+}
+
+.links > a {
+    padding:20px 0;
+    width: 100%;
+    height:100%;
+}
+
+.links:hover {
+    flex-basis: 150%;
+    background-color:#A1CDF4;
 }
 
 .title {
