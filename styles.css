@@ -21,6 +21,7 @@ time, mark, audio, video {
 
 :root {
     font-family: 'Quicksand', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .hidden {
@@ -109,8 +110,10 @@ time, mark, audio, video {
     display:flex;
     justify-content: space-around;
     width:100%;
+    padding: 20px 0;
     text-align: center;
     font-size: 60px;
+    font-weight: 900;
 }
 
 .bio {
@@ -123,4 +126,14 @@ time, mark, audio, video {
     justify-content: space-around;
     margin: 20px 0px;
     width:100%;
+}
+
+.footer {
+    display:flex;
+    flex-direction:row;
+    height:50px;
+    width:100%;
+    text-align: center;
+    color: #DBE9EE;
+    background-color: #166088;
 }
