@@ -26,6 +26,7 @@ time, mark, audio, video {
     overflow-x: hidden;
 }
 
+
 .hidden {
     height: 0px;
     width:0px;
@@ -253,4 +254,18 @@ li {
     text-align: center;
     color: #DBE9EE;
     background-color: #997E72;
+}
+
+
+@media only screen and (max-width: 735px) {
+    .navbar {
+        height:150px;
+        font-size: 37px;
+        font-weight: 900;
+    }
+
+    .whole-page{
+        margin-top:150px;
+    }
+
 }
