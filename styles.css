@@ -22,6 +22,7 @@ time, mark, audio, video {
 :root {
     font-family: 'Quicksand', sans-serif;
     scroll-behavior: smooth;
+    color: #444545;
 }
 
 .hidden {
@@ -111,14 +112,54 @@ time, mark, audio, video {
     justify-content: space-around;
     width:100%;
     padding: 10px 0;
+}
+
+.face {
+    width:250px;
+    max-width:100%;
+    border-radius: 20%;
+    display:block;
+    height:auto;
+    margin:auto;
+    float: left;
+    margin: 20px 20px 20px 0;
+    border: 3px solid #166088;
+}
+
+.apply-why{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.copy {
+    display:flex;
+    flex-direction: column;
+    width:90%;
+    padding: 20px 5% 0 5%;
+}
+
+h1 {
     text-align: center;
     font-size: 60px;
     font-weight: 900;
 }
 
-.bio {
-    display:flex;
-    width:100%;
+h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #997E72
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: left;
+}
+
+p {
+    font-size:25px;
 }
 
 .video {
