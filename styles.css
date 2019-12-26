@@ -133,6 +133,9 @@ time, mark, audio, video {
     width: 100%;
 }
 
+.why-desc {
+}
+
 .copy {
     display:flex;
     flex-direction: column;
@@ -171,6 +174,75 @@ li {
     justify-content: space-around;
     margin: 40px 0px;
     width:100%;
+}
+
+.carousel-box {
+    width:720px;
+    height: 404px;
+    margin: 20px 0 0 -30px; /*could be wrong*/
+    overflow: hidden;
+    text-align: center;
+    border: 2px solid #444545;
+}
+
+.carousel-image {
+    float:left;
+    margin:0px;
+    padding: 0px;
+}
+
+.image-box {
+    width: 4320px;
+    height : 404px;
+    position: relative;
+    transition: left 1s;
+}
+
+.button-box {
+    top:-30px;
+    position: relative;
+}
+
+.carousel-button {
+    display:inline-block;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin: 0px 7px;
+    border: 2px solid #444545;
+    background-color: #DBE9EE;
+}
+
+.carousel-button:hover {
+    background-color: #166088;
+}
+
+#carousel-image-1:target ~ .image-box {
+    left: 0px;
+}
+
+#carousel-image-2:target ~ .image-box {
+    left: -720px;
+}
+
+#carousel-image-3:target ~ .image-box {
+    left: -1440px;
+}
+
+#carousel-image-4:target ~ .image-box {
+    left: -2160;
+}
+
+#carousel-image-5:target ~ .image-box {
+    left: -2880;
+}
+
+#carousel-image-6:target ~ .image-box {
+    left: -3600px;
+}
+
+#survey {
+    height:300px;
 }
 
 .footer {
