@@ -23,6 +23,7 @@ time, mark, audio, video {
     font-family: 'Quicksand', sans-serif;
     scroll-behavior: smooth;
     color: #444545;
+    overflow-x: hidden;
 }
 
 .hidden {
@@ -176,10 +177,11 @@ li {
 .carousel-box {
     width:720px;
     height: 404px;
-    margin: 20px 0 50px -35px; /*could be wrong*/
+    margin: 20px 0 50px -38px; /*could be wrong*/
     overflow: hidden;
     text-align: center;
     border: 2px solid #444545;
+    user-select: none;
 }
 
 .carousel-image {
@@ -245,8 +247,9 @@ li {
 .footer {
     display:flex;
     flex-direction:row;
-    height:50px;
+    height:80px;
     width:100%;
+    font-size: 20px;
     text-align: center;
     color: #DBE9EE;
     background-color: #997E72;
