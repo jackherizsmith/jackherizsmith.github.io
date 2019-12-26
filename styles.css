@@ -162,6 +162,10 @@ p {
     font-size:25px;
 }
 
+li {
+    padding:10px 0;
+}
+
 .video {
     display:flex;
     justify-content: space-around;
