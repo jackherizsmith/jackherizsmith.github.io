@@ -133,9 +133,6 @@ time, mark, audio, video {
     width: 100%;
 }
 
-.why-desc {
-}
-
 .copy {
     display:flex;
     flex-direction: column;
@@ -179,7 +176,7 @@ li {
 .carousel-box {
     width:720px;
     height: 404px;
-    margin: 20px 0 0 -30px; /*could be wrong*/
+    margin: 20px 0 50px -35px; /*could be wrong*/
     overflow: hidden;
     text-align: center;
     border: 2px solid #444545;
