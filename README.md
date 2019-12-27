@@ -1,2 +1,4 @@
 # jackherizsmith.github.io
-Website
+
+Made with insights from [Make a README](https://www.makeareadme.com/)
+
