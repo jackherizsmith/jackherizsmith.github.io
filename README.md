@@ -12,7 +12,7 @@ I've also included links at the bottom of the page in case it's of interest - th
 
 ## Accessibility
 
-For the most part, the contrast of foreground and background is 7.74. The navbar has a contrast of 5.5 which meets most WCAG guidelines, whilse the footer failed with a contrast of 3... So I have corrected the background to the darker palette option.
+For the most part, the contrast of foreground and background is 7.74. The navbar has a contrast of 5.5 which meets most WCAG guidelines, whilst the footer failed with a contrast of 3... So I have corrected the background to the darker palette option.
 
 
 
