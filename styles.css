@@ -43,8 +43,6 @@ time, mark, audio, video {
     text-align: center;
     top:0;
     left:0;
-    font-size: 25px;
-    color: #DBE9EE;
     background-color: #166088;
     z-index:1;
 }
@@ -55,6 +53,8 @@ time, mark, audio, video {
     flex-basis:100%;
     justify-content: space-around;
     align-items: center;
+    font-size: 25px;
+    color: #DBE9EE;
     width: 100%;
     height:100%;
 }
@@ -149,7 +149,7 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 50px;
     font-weight: 800;
     color: #997E72
 }
@@ -230,11 +230,11 @@ li {
 }
 
 #carousel-image-4:target ~ .image-box {
-    left: -2160;
+    left: -2160px;
 }
 
 #carousel-image-5:target ~ .image-box {
-    left: -2880;
+    left: -2880px;
 }
 
 #carousel-image-6:target ~ .image-box {
@@ -255,12 +255,59 @@ li {
 @media only screen and (max-width: 735px) {
     .navbar {
         height:150px;
+    }
+
+    .nav-item {
         font-size: 37px;
         font-weight: 900;
+        border: 1px dashed #DBE9EE;
     }
 
     .whole-page{
         margin-top:150px;
     }
 
+    .links {
+        border: 1px dashed #166088;
+        background-color: #A1CDF4;
+    }
+
+    .links:hover {
+        flex-basis: 100%;
+        background-color: #A1CDF4;
+    }
+
+    h2 {
+        font-size: 45px;
+    }
+
+    h3 {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 35px;
+    }
+
+    .apply-why{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .button-box {
+        position: relative;
+        top:-60px;
+    }
+    .carousel-button {
+        display:inline-block;
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        margin: 0px 15px;
+        border: 7px solid #444545;
+    }
+
+    .footer {
+        height: 120px;
+    }
 }
