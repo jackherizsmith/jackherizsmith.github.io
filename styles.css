@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe,
+html, body, div, span, applet, object, iframe, 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -10,7 +10,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, 
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video {                  /*Found this code that initialises formatting to help fix unexpected browser bugs*/
 	margin: 0;
 	padding: 0;
     border: 0;
@@ -19,40 +19,40 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-:root {
-    font-family: 'Quicksand', sans-serif;
-    scroll-behavior: smooth;
-    color: #444545;
-    overflow-x: hidden;
+:root {                                     /*Global CSS style*/
+    font-family: 'Quicksand', sans-serif;   /*Lovely font with sans serif back up*/
+    scroll-behavior: smooth;                /*For smooth scrolling in nav and carousel*/
+    color: #444545;                       /*Default font colour - see colour palette in Plan folder*/
+    overflow-x: hidden;                     /*I don't like a sideways scroll!*/
 }
 
 
-.hidden {
+.hidden {                                   /*Invisible point in page for nav scrolling*/
     height: 0px;
     width:0px;
     background-color: transparent;
     color: transparent;
 }
 
-.navbar {
-    position:fixed;
-    display:flex;
-    flex-direction:row;
-    height:75px;
+.navbar {          
+    position:fixed;                         /*Fixing navbar to top of window*/
+    display:flex;                           /*Navbar made with flexbox..*/
+    flex-direction:row;                     /*..with boxes in a row*/
+    height:75px; 
     width: 100%;
-    max-width:100%;
+    max-width:100%;                         /*Making sure navbar doesn't extend outside visible window*/
     text-align: center;
     top:0;
     left:0;
     background-color: #166088;
-    z-index:1;
+    z-index:1;                              /*Always in front of other page elements*/
 }
 
 .nav-item {
     display:flex;
     flex-direction: row;
-    flex-basis:100%;
-    justify-content: space-around;
+    flex-basis:100%;                        /*Each item the same size as each other*/
+    justify-content: space-around;          /*Spacing each item*/
     align-items: center;
     font-size: 25px;
     color: #DBE9EE;
@@ -64,17 +64,17 @@ time, mark, audio, video {
     color:inherit;
     width:inherit;
     padding:20px 0;
-    text-decoration: inherit;
+    text-decoration: inherit;               /*Prevent link decoration on text*/
 }
 
-.nav-item:hover {
+.nav-item:hover {                           /*Highlighting navbar selection*/
     color: white;
     font-weight: 900;
 }
 
 .whole-page {
     display:flex;
-    flex-direction: column;
+    flex-direction: column;                 /*Rest of page is a large vertical flexbox*/
     margin-top:75px;
     position:relative;
     background-color: #DBE9EE;
@@ -92,11 +92,11 @@ time, mark, audio, video {
 .links {
     display:flex;
     flex-direction: row;
-    flex-basis:100%;
+    flex-basis:100%;                        /*Each link the same relative size by default*/
     justify-content: space-around;
     width: 100%;
     height:100%;
-    transition: all 0.6s;
+    transition: all 0.6s;                   /*make transitions last 0.6s - see related :hover class*/
 }
 
 .links > a {
@@ -106,8 +106,8 @@ time, mark, audio, video {
 }
 
 .links:hover {
-    flex-basis: 140%;
-    background-color:#A1CDF4;
+    flex-basis: 140%;                       /*Grow associated box by relatively 140%*/
+    background-color:#A1CDF4;             /*Change colour*/
 }
 
 .title {
@@ -129,16 +129,23 @@ time, mark, audio, video {
     border: 3px solid #166088;
 }
 
+.video {
+    display:flex;
+    justify-content: space-around;
+    margin: 40px 0px;
+    width:100%;
+}
+
 .apply-why{
     display:flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;                        /*Push sections around based on available width*/
     flex-direction: row;
     justify-content: center;
     width: 100%;
 }
 
 .why-desc {
-    width:300px;
+    width:250px;                            /*fixed width for wrapping*/
 }
 
 .copy {
@@ -156,7 +163,8 @@ h1 {
 h2 {
     font-size: 50px;
     font-weight: 800;
-    color: #997E72
+    color: #997E72;
+    margin: 10px 0 0 30px;
 }
 
 h3 {
@@ -173,31 +181,24 @@ li {
     padding:10px 0;
 }
 
-.video {
-    display:flex;
-    justify-content: space-around;
-    margin: 40px 0px;
-    width:100%;
-}
-
 .carousel-box {
-    width:720px;
+    width:720px;                            /*Photos set to 720px*/
     height: 404px;
-    margin: 20px 0 50px -38px;
-    overflow: hidden;
+    margin: 20px 0 50px 0;
+    overflow: hidden;                       /*Hide everything outside frame*/
     text-align: center;
     border: 2px solid #444545;
-    user-select: none;
+    user-select: none;                      /*Supress cursor over images*/
 }
 
-.carousel-image {
+.carousel-image {                           /*Ensure images are where they need to be*/
     float:left;
     margin:0px;
     padding: 0px;
 }
 
 .image-box {
-    width: 4320px;
+    width: 4320px;                          /*All images in one long row*/
     height : 404px;
     position: relative;
     transition: left 1s;
@@ -205,25 +206,25 @@ li {
 
 .button-box {
     position: relative;
-    top:-30px;
+    top:-30px;                              /*Overlay image with navigation buttons*/
 }
 
 .carousel-button {
     display:inline-block;
     height: 12px;
     width: 12px;
-    border-radius: 50%;
+    border-radius: 50%;                     /*Nice round buttons*/
     margin: 0px 7px;
     border: 2px solid #444545;
     background-color: #DBE9EE;
 }
 
 .carousel-button:hover {
-    background-color: #166088;
+    background-color: #166088;            /*Fill round buttons on hover*/
 }
 
 #carousel-image-1:target ~ .image-box {
-    left: 0px;
+    left: 0px;                              /*Push row to specific location depending on choice*/
 }
 
 #carousel-image-2:target ~ .image-box {
@@ -257,15 +258,15 @@ li {
     background-color: #997E72;
 }
 
-@media only screen and (max-width: 735px) {
+@media only screen and (max-width: 735px) {    /*Edits for smaller screen*/
     .navbar {
-        height:150px;
+        height:150px;                          /*Make navbar easier to see on smaller screens*/
     }
 
     .nav-item {
-        font-size: 37px;
+        font-size: 37px;                       /*Increase font size*/
         font-weight: 900;
-        border: 1px dashed #DBE9EE;
+        border: 1px dashed #DBE9EE;          /*Outline links for clear delineation*/
     }
 
     .whole-page{
@@ -273,16 +274,16 @@ li {
     }
 
     .links {
-        border: 1px dashed #166088;
+        border: 1px dashed #166088;          /*Outline instead of transition*/
         background-color: #A1CDF4;
     }
 
     .links:hover {
-        flex-basis: 100%;
+        flex-basis: 100%;                      /*Overwrite / prevent transition*/
         background-color: #A1CDF4;
     }
 
-    h2 {
+    h2 {                                       /*Make all the text a bit bigger*/
         font-size: 45px;
     }
 
@@ -296,15 +297,15 @@ li {
 
     .button-box {
         position: relative;
-        top:-60px;
+        top:-40px;
     }
-    .carousel-button {
+    .carousel-button {                         /*Make carousel buttons bigger*/
         display:inline-block;
-        height: 40px;
-        width: 40px;
+        height: 20px;
+        width: 20px;
         border-radius: 50%;
         margin: 0px 15px;
-        border: 7px solid #444545;
+        border: 3px solid #444545;
     }
 
     .footer {
