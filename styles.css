@@ -39,7 +39,8 @@ time, mark, audio, video {
     display:flex;
     flex-direction:row;
     height:75px;
-    width:100%;
+    width: 100%;
+    max-width:100%;
     text-align: center;
     top:0;
     left:0;
