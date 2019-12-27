@@ -11,211 +11,225 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {                  /*Found this code that initialises formatting to help fix unexpected browser bugs*/
-	margin: 0;
-	padding: 0;
-    border: 0;
-	font-size: 100%;
-	font: inherit;
+    border:         0;
+	margin:         0;
+	padding:        0;
+    
+    font:           inherit;
+	font-size:      100%;
 	vertical-align: baseline;
 }
 
 :root {                                     /*Global CSS style*/
-    font-family: 'Quicksand', sans-serif;   /*Lovely font with sans serif back up*/
+    color:           #444545;             /*Default font colour - see colour palette in Plan folder*/
+    font-family:     'Quicksand', sans-serif;/*Lovely font with sans serif back up*/
+    
+    overflow-x:      hidden;                /*I don't like a sideways scroll!*/
     scroll-behavior: smooth;                /*For smooth scrolling in nav and carousel*/
-    color: #444545;                       /*Default font colour - see colour palette in Plan folder*/
-    overflow-x: hidden;                     /*I don't like a sideways scroll!*/
 }
 
 
 .hidden {                                   /*Invisible point in page for nav scrolling*/
-    height: 0px;
-    width:0px;
+    height:           70px;
+    width:            0px;
+    
     background-color: transparent;
-    color: transparent;
+    color:            transparent;
 }
 
 .navbar {          
-    position:fixed;                         /*Fixing navbar to top of window*/
-    display:flex;                           /*Navbar made with flexbox..*/
-    flex-direction:row;                     /*..with boxes in a row*/
-    height:75px; 
-    width: 100%;
-    max-width:100%;                         /*Making sure navbar doesn't extend outside visible window*/
-    text-align: center;
-    top:0;
-    left:0;
     background-color: #166088;
-    z-index:1;                              /*Always in front of other page elements*/
+    display:          flex;                  /*Navbar made with flexbox..*/
+    flex-direction:   row;                   /*..with boxes in a row*/
+    height:           75px; 
+    left:             0;
+    max-width:        100%;                  /*Making sure navbar doesn't extend outside visible window*/
+    position:         fixed;                 /*Fixing navbar to top of window*/
+    top:              0;
+    width:            100%;
+    z-index:          1;                     /*Always in front of other page elements*/
+    
+    text-align:       center;
 }
 
 .nav-item {
-    display:flex;
-    flex-direction: row;
-    flex-basis:100%;                        /*Each item the same size as each other*/
-    justify-content: space-around;          /*Spacing each item*/
-    align-items: center;
-    font-size: 25px;
-    color: #DBE9EE;
-    width: 100%;
-    height:100%;
+    align-items:     center;
+    display:         flex;
+    flex-basis:      100%;                   /*Each item the same size as each other*/
+    flex-direction:  row;
+    height:          100%;
+    justify-content: space-around;           /*Spacing each item*/
+    width:           100%;
+    
+    color:           #DBE9EE;
+    font-size:       25px;
 }
 
 .nav-item > a {
-    color:inherit;
-    width:inherit;
-    padding:20px 0;
-    text-decoration: inherit;               /*Prevent link decoration on text*/
+    padding:         20px 0;
+    width:           inherit;
+    
+    color:           inherit;
+    text-decoration: inherit;                /*Prevent link decoration on text*/
 }
 
-.nav-item:hover {                           /*Highlighting navbar selection*/
-    color: white;
+.nav-item:hover {                            /*Highlighting navbar selection*/
+    color:     white;
     font-weight: 900;
 }
 
 .whole-page {
-    display:flex;
-    flex-direction: column;                 /*Rest of page is a large vertical flexbox*/
-    margin-top:75px;
-    position:relative;
+    display:          flex;
+    flex-direction:   column;                /*Rest of page is a large vertical flexbox*/
+    margin-top:       5px;
+    position:         relative;
+    
     background-color: #DBE9EE;
 }
 
 .links-header {
-    position: relative;
-    display:flex;
-    flex-direction:row;
+    display:         flex;
+    flex-direction:  row;
     justify-content: space-around;
-    width:100%;
-    text-align: center;
+    position:        relative;
+    width:           100%;
+    
+    text-align:      center;
 }
 
 .links {
-    display:flex;
-    flex-direction: row;
-    flex-basis:100%;                        /*Each link the same relative size by default*/
+    display:         flex;
+    flex-basis:      100%;                  /*Each link the same relative size by default*/
+    flex-direction:  row;
+    height:          100%;
     justify-content: space-around;
-    width: 100%;
-    height:100%;
-    transition: all 0.6s;                   /*make transitions last 0.6s - see related :hover class*/
+    width:           100%;
+    
+    transition:      all 0.6s;              /*make transitions last 0.6s - see related :hover class*/
 }
 
 .links > a {
-    padding:30px 0;
-    width: 100%;
-    height:100%;
+    height:  100%;
+    padding: 30px 0;
+    width:   100%;
 }
 
 .links:hover {
-    flex-basis: 140%;                       /*Grow associated box by relatively 140%*/
-    background-color:#A1CDF4;             /*Change colour*/
+    flex-basis:       140%;                 /*Grow associated box by relatively 140%*/
+    
+    background-color: #A1CDF4;            /*Change colour*/
 }
 
 .title {
-    display:flex;
+    display:         flex;
     justify-content: space-around;
-    width:100%;
-    padding: 10px 0;
+    padding:         10px 0;
+    width:           100%;
 }
 
 .face {
-    width:250px;
-    max-width:100%;
+    border:        3px solid #166088;
     border-radius: 20%;
-    display:block;
-    height:auto;
-    margin:auto;
-    float: left;
-    margin: 20px 20px 20px 0;
-    border: 3px solid #166088;
+    display:       block;
+    height:        auto;
+    float:         left;
+    margin:        20px 20px 20px 0;
+    max-width:     100%;
+    width:         250px;
 }
 
 .video {
-    display:flex;
+    display:         flex;
     justify-content: space-around;
-    margin: 40px 0px;
-    width:100%;
+    margin:          40px 0px;
+    width:           100%;
 }
 
 .apply-why{
-    display:flex;
-    flex-wrap: wrap;                        /*Push sections around based on available width*/
-    flex-direction: row;
+    display:         flex;
+    flex-direction:  row;
+    flex-wrap:       wrap;                  /*Push sections around based on available width*/
     justify-content: center;
-    width: 100%;
+    width:           100%;
 }
 
 .why-desc {
-    width:250px;                            /*fixed width for wrapping*/
+    width: 250px;                           /*fixed width for wrapping*/
 }
 
 .copy {
-    display:flex;
+    display:        flex;
     flex-direction: column;
-    padding: 20px 5% 0 5%;
+    padding:        20px 5% 0 5%;
 }
 
 h1 {
-    text-align: center;
-    font-size: 60px;
+    font-size:   60px;
     font-weight: 900;
+    text-align:  center;
 }
 
 h2 {
-    font-size: 50px;
+    margin:      10px 0 0 30px;
+    
+    color:     #997E72;
+    font-size:   50px;
     font-weight: 800;
-    color: #997E72;
-    margin: 10px 0 0 30px;
 }
 
 h3 {
-    font-size: 30px;
+    font-size:   30px;
     font-weight: 700;
-    text-align: left;
+    text-align:  left;
 }
 
 p {
-    font-size:25px;
+    font-size: 25px;
 }
 
 li {
-    padding:10px 0;
+    padding: 10px 0;
 }
 
 .carousel-box {
-    width:720px;                            /*Photos set to 720px*/
-    height: 404px;
-    margin: 20px 0 50px 0;
-    overflow: hidden;                       /*Hide everything outside frame*/
-    text-align: center;
-    border: 2px solid #444545;
+    border:      2px solid #444545;
+    height:      404px;
+    margin:      20px 0 50px 0;
+    width:       720px;                     /*Photos set to 720px*/
+    
+    text-align:  center;
+    
+    overflow:    hidden;                    /*Hide everything outside frame*/
     user-select: none;                      /*Supress cursor over images*/
 }
 
 .carousel-image {                           /*Ensure images are where they need to be*/
-    float:left;
-    margin:0px;
+    float:   left;
+    margin:  0px;
     padding: 0px;
 }
 
 .image-box {
-    width: 4320px;                          /*All images in one long row*/
-    height : 404px;
-    position: relative;
+    height :    404px;
+    position:   relative;
+    width:      4320px;                     /*All images in one long row*/
+    
     transition: left 1s;
 }
 
 .button-box {
     position: relative;
-    top:-30px;                              /*Overlay image with navigation buttons*/
+    top:      -30px;                        /*Overlay image with navigation buttons*/
 }
 
 .carousel-button {
-    display:inline-block;
-    height: 12px;
-    width: 12px;
-    border-radius: 50%;                     /*Nice round buttons*/
-    margin: 0px 7px;
-    border: 2px solid #444545;
+    border:           2px solid #444545;
+    border-radius:    50%;                  /*Nice round buttons*/
+    display:          inline-block;
+    height:           12px;
+    margin:           0px 7px;
+    width:            12px;
+    
     background-color: #DBE9EE;
 }
 
@@ -248,14 +262,15 @@ li {
 }
 
 .footer {
-    display:flex;
-    flex-direction:row;
-    height:80px;
-    width:100%;
-    font-size: 20px;
-    text-align: center;
-    color: #DBE9EE;
+    display:          flex;
+    flex-direction:   row;
+    height:           80px;
+    width:            100%;
+    
     background-color: #997E72;
+    color:            #DBE9EE;
+    font-size:        20px;
+    text-align:       center;
 }
 
 @media only screen and (max-width: 735px) {    /*Edits for smaller screen*/
@@ -264,22 +279,29 @@ li {
     }
 
     .nav-item {
-        font-size: 37px;                       /*Increase font size*/
+        border:      1px dashed #DBE9EE;     /*Outline links for clear delineation*/
+        
+        font-size:   37px;                     /*Increase font size*/
         font-weight: 900;
-        border: 1px dashed #DBE9EE;          /*Outline links for clear delineation*/
     }
 
     .whole-page{
-        margin-top:150px;
+        margin-top:5px;
+    }
+
+    .hidden {
+        height: 145px;
     }
 
     .links {
-        border: 1px dashed #166088;          /*Outline instead of transition*/
+        border:             1px dashed #166088;/*Outline instead of transition*/
+        
         background-color: #A1CDF4;
     }
 
     .links:hover {
-        flex-basis: 100%;                      /*Overwrite / prevent transition*/
+        flex-basis:         100%;              /*Overwrite / prevent transition*/
+        
         background-color: #A1CDF4;
     }
 
@@ -296,16 +318,16 @@ li {
     }
 
     .button-box {
-        position: relative;
-        top:-40px;
+        position:   relative;
+        top:        -40px;
     }
     .carousel-button {                         /*Make carousel buttons bigger*/
-        display:inline-block;
-        height: 20px;
-        width: 20px;
+        border:        3px solid #444545;
         border-radius: 50%;
-        margin: 0px 15px;
-        border: 3px solid #444545;
+        display:       inline-block;
+        height:        20px;
+        margin:        0px 15px;
+        width:         20px;
     }
 
     .footer {
