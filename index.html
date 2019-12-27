@@ -5,27 +5,27 @@
 
 <main>                                                                                                  <!--Structure based on initial design on paper - see Plan folder-->
     <nav class="navbar">                                                                                <!--A nav bar fixed to the top of the screen-->
-        <div class="nav-item"><a href="#top"><img src="Logos\home-icon.png" height=50px></a></div>      <!--Home button, etc-->
-        <div class="nav-item"><a href="#bio">Bio</a></div>
-        <div class="nav-item"><a href="#why-section">Why me?</a></div>
-        <div class="nav-item"><a href="#carousel">Photos</a></div>
-        <div class="nav-item"><a href="https://www.linkedin.com/in/jherizsmith/" target="_blank"><img src="Logos\linkedin-logo-small.png"></a></div>
+        <nav class="nav-item"><a href="#top"><img src="Logos\home-icon.png" alt="Home" height=50px></a></nav>      <!--Home button, etc-->
+        <nav class="nav-item"><a href="#bio">Bio</a></nav>
+        <nav class="nav-item"><a href="#why-section">Why me?</a></nav>
+        <nav class="nav-item"><a href="#carousel">Photos</a></nav>
+        <nav class="nav-item"><a href="https://www.linkedin.com/in/jherizsmith/" target="_blank"><img src="Logos\linkedin-logo-small.png" alt="LinkedIn"></a></nav>
     </nav>
     
     <div name="top" class="hidden"></div>                                                               <!--A hidden div to scroll to-->
     <div class="whole-page">                                                                            <!--Setting the rest of the page separate from navbar-->
         <div class="links-header">                                                                      <!--Links to application pre-requisites-->
             
-            <div class="links"><a href="https://github.com/jackherizsmith/jackherizsmith.github.io" target="_blank"><img src="Logos\github-logo.svg"            height=100px></a></div>
-            <div class="links"><a href="https://www.freecodecamp.org/jackherizsmith"                target="_blank"><img src="Logos\free-code-camp-logo.svg"    height=100px></a></div>
-            <div class="links"><a href="https://www.codewars.com/users/jackherizsmith"              target="_blank"><img src="Logos\codewars-logo.png"          height=100px></a></div>
+            <div class="links"><a href="https://github.com/jackherizsmith/jackherizsmith.github.io" target="_blank"><img src="Logos\github-logo.svg"         alt="GitHub"   height=100px></a></div>
+            <div class="links"><a href="https://www.freecodecamp.org/jackherizsmith"                target="_blank"><img src="Logos\free-code-camp-logo.svg" alt="FCC"      height=100px></a></div>
+            <div class="links"><a href="https://www.codewars.com/users/jackherizsmith"              target="_blank"><img src="Logos\codewars-logo.png"       alt="CodeWars" height=100px></a></div>
         
         </div>                                                                                          <!--I wanted the links to look nice when hovering, see CSS .links class-->
         
-        <h1 class="title" style="margin:auto">My application for Founders and Coders</h1>                                   <!--Main header-->
+        <h1 class="title" style="margin:auto">My application for Founders and Coders</h1>               <!--Main header-->
         
         <div id="bio" class="hidden"></div>
-        <div class="copy">            
+        <section class="copy">            
             <p><img class="face" src="Jack-face.jfif">Hey, I'm Jack. Here's my face. Thank you so much for visiting my first ever webpage,  which pulls together all the components 
                 of the rest of my application to join the Founders and Coders Spring 2020 cohort - it's a real pleasure to have you here.
             </br> </br>              
@@ -40,17 +40,17 @@
                 and current cohortees, it is clear that Founders and Coders is the coding bootcamp that is offering a route to having the biggest social impact, whilst also 
                 encouraging and enabling its members to give back to its community.
             </p>
-        </div>
+        </section>
         
         <div class="video"><iframe width="720" height="405" src="https://www.youtube.com/embed/dGcsHMXbSOA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; 
-            gyroscope; picture-in-picture" allowfullscreen></iframe></div>                              <!--Adding video as a sort of guide to site and my application-->
+            gyroscope; picture-in-picture" allowfullscreen alt="application-video"></iframe></div>       <!--Adding video as a sort of guide to site and my application-->
         
         <div id="why-section" class="hidden"></div>
         <h2>Why am I applying?</h2>
-        <div class="apply-why">                                                                         <!--Going for three sections that wrap using Flexbox, depending on window width-->
+        <section class="apply-why">                                                                      <!--Going for three sections that wrap using Flexbox, depending on window width-->
             <div class="copy">
                 <h3 class="why-title">Community</h3>
-                <ul>                                                                                    <!--Decided on unordered lists for this section-->
+                <ul>                                                                                     <!--Decided on unordered lists for this section-->
                     <li><p class="why-desc">Working with ambitious and diverse coders</p></li>
                     <li><p class="why-desc">Opportunity to teach others during & after course</p></li>
                     <li><p class="why-desc">Alumni network & events</p></li>
@@ -74,30 +74,30 @@
                     <li><p class="why-desc">A proven track record of successful graduates</p></li>
                 </ul>
             </div>
-        </div> 
+        </section> 
 
         <h2 id="carousel">My favourite desktops</h2 >
         <div style="margin:auto">                                                                       <!--A carousel that contains a row of six photos, with a viewport that only shows one at a time-->
             
-            <div class="carousel-box">                                                              <!--The container of the carousel-->
-                <span id="carousel-image-1"></span>                                                 <!--Position of image to scroll to-->
+            <section class="carousel-box">                                                              <!--The container of the carousel-->
+                <span id="carousel-image-1"></span>                                                     <!--Position of image to scroll to-->
                 <span id="carousel-image-2"></span>
                 <span id="carousel-image-3"></span>
                 <span id="carousel-image-4"></span>
                 <span id="carousel-image-5"></span>
                 <span id="carousel-image-6"></span>
                 
-                <div class="image-box">                                                             <!--The box containing the visible image-->
-                    <img src="Carousel\1.jpg" class="carousel-image">                               <!--Each image-->
-                    <img src="Carousel\2.jpg" class="carousel-image">
-                    <img src="Carousel\3.jpg" class="carousel-image">
-                    <img src="Carousel\4.jpg" class="carousel-image">
-                    <img src="Carousel\5.jpg" class="carousel-image">
-                    <img src="Carousel\6.jpg" class="carousel-image">
+                <div class="image-box">                                                                 <!--The box containing the visible image-->
+                    <img src="Carousel\1.jpg" alt="winter-trees"    class="carousel-image">             <!--Each image-->
+                    <img src="Carousel\2.jpg" alt="neon-tokyo"      class="carousel-image">
+                    <img src="Carousel\3.jpg" alt="rainbow-canyon"  class="carousel-image">
+                    <img src="Carousel\4.jpg" alt="nessie-photos"   class="carousel-image">
+                    <img src="Carousel\5.jpg" alt="planet-horizons" class="carousel-image">
+                    <img src="Carousel\6.jpg" alt="starry-desert"   class="carousel-image">
                 </div>
                 
-                <div class="button-box">                                                            <!--The box containing navigation buttons-->
-                    <a href="#carousel-image-1" class="carousel-button"></a>                        <!--The image each button links to-->
+                <div class="button-box">                                                                <!--The box containing navigation buttons-->
+                    <a href="#carousel-image-1" class="carousel-button"></a>                            <!--The image each button links to-->
                     <a href="#carousel-image-2" class="carousel-button"></a>
                     <a href="#carousel-image-3" class="carousel-button"></a>
                     <a href="#carousel-image-4" class="carousel-button"></a>
@@ -105,7 +105,7 @@
                     <a href="#carousel-image-6" class="carousel-button"></a>
                 </div>
             </div>
-        </div>
+        </section>
         
         <footer class="footer">                                                                         <!--Footer containing other links that summarise all my periphery work on this application-->
             <div class="nav-item"><a href="https://codepen.io/eskimofeet/full/rNNvxdj">CodePen project</a></div>
