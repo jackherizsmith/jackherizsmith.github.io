@@ -178,7 +178,7 @@ li {
 .carousel-box {
     width:720px;
     height: 404px;
-    margin: 20px 0 50px -38px; /*could be wrong*/
+    margin: 20px 0 50px -38px;
     overflow: hidden;
     text-align: center;
     border: 2px solid #444545;
@@ -199,8 +199,8 @@ li {
 }
 
 .button-box {
-    top:-30px;
     position: relative;
+    top:-30px;
 }
 
 .carousel-button {
@@ -241,10 +241,6 @@ li {
     left: -3600px;
 }
 
-#survey {
-    height:300px;
-}
-
 .footer {
     display:flex;
     flex-direction:row;
@@ -255,7 +251,6 @@ li {
     color: #DBE9EE;
     background-color: #997E72;
 }
-
 
 @media only screen and (max-width: 735px) {
     .navbar {
