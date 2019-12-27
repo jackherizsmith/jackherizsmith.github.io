@@ -30,6 +30,7 @@ time, mark, audio, video {                  /*Found this code that initialises f
 
 
 .hidden {                                   /*Invisible point in page for nav scrolling*/
+    display:absolute;
     height:           70px;
     width:            0px;
     
@@ -164,9 +165,15 @@ time, mark, audio, video {                  /*Found this code that initialises f
 }
 
 h1 {
+    padding-top: 50px;
+
     font-size:   60px;
     font-weight: 900;
     text-align:  center;
+}
+
+h1 {
+    max-width: 80%;
 }
 
 h2 {
@@ -283,6 +290,10 @@ li {
         
         font-size:   37px;                     /*Increase font size*/
         font-weight: 900;
+    }
+
+    .nav-item > a {
+        padding: 50px 0;
     }
 
     .whole-page{
