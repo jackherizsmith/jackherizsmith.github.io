@@ -131,15 +131,19 @@ time, mark, audio, video {
 
 .apply-why{
     display:flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     width: 100%;
 }
 
+.why-desc {
+    width:300px;
+}
+
 .copy {
     display:flex;
     flex-direction: column;
-    width:90%;
     padding: 20px 5% 0 5%;
 }
 
@@ -288,11 +292,6 @@ li {
 
     p {
         font-size: 35px;
-    }
-
-    .apply-why{
-        display:flex;
-        flex-direction: column;
     }
 
     .button-box {
