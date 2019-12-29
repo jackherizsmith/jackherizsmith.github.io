@@ -1,68 +1,56 @@
+/* Using JavaScipt knowhow from CodeWars katas and implementing it in a real website has been a lot of fun 
+- at times challenging and frustrating, and has given me a new perspective on how much there is to learn...*/
+
+/* Initialise carousel */
 let playing = false;
-let slideNumber = 0;
+let imgNumber = 0;                          //0-indexed to help with positioning in setOffet()
 let offset = "";
 
-function updateImage() {
+/* autoplay() runs every 2 seconds - see setInterval function below */
+function autoplay() {                    
     if (playing) {            
-        if (slideNumber == 5){
-            setSlideNumber(0);
-        } else {
-            setSlideNumber(slideNumber + 1);
-        }
+        imgNumber == 5 ? setImgNumber(0) : setImgNumber(imgNumber + 1);
     }
 }
 
-function autoplay() {
+/* Toggle flips the value of 'playing' and changes the indicator colour */
+function toggle() {
     playing = !playing;
-    document.getElementById("auto-on").style.backgroundColor = playing ? 
-    'rgba(61,153,112, 0.7)' : 
-    'rgba(247,63,58, 0.7)';
+    document.getElementById("autoIndicator").style.backgroundColor = playing ? 
+    'rgba(61,153,112, 0.7)' :               //olive if on
+    'rgba(247,63,58, 0.7)';                 //tomato if off
 }
 
-function setOffset(slideNumber){
-    offset = (-720 * slideNumber) + "px";
+/* Sets the (new) x-coordinate of the row of carousel images */
+function setOffset(imgNumber){
+    offset = (-720 * imgNumber) + "px";     //saved as string for updating CSS style
     document.getElementById("imageBox").style.left = offset;
 }
 
-function setSlideNumber(n){
-    document.getElementById(`carBut${slideNumber}`).style.backgroundColor = '#166088';
-    document.getElementById(`carBut${n}`).style.backgroundColor = '#a1cdf4';
-    slideNumber = n;
-    setOffset(slideNumber);
+/* Takes the new slide number and updates the button colours and slideNumber variable */
+function setImgNumber(n){
+    document.getElementById(`carBut${imgNumber}`).style.backgroundColor = '#166088'; //reset last button colour
+    document.getElementById(`carBut${n}`).style.backgroundColor         = '#a1cdf4'; //set new button colour
+    imgNumber = n;
+    setOffset(imgNumber);                   //use new slideNumber value to offset images as/if required
 }
 
+/* Lots of options for keyboard interaction */
 document.onkeydown = function(event) {
-    if(event.keyCode == 37){
-        if (slideNumber == 0) {n = 5}
-        else (n = slideNumber - 1)
-        setSlideNumber(n);
+    (event.keyCode == 37) ? (imgNumber == 0) ? n = 5 : n = imgNumber - 1 : //left cursor
+    (event.keyCode == 39) ? (imgNumber == 5) ? n = 0 : n = imgNumber + 1 : //right cursor
+    (event.keyCode == 49) ? n = 0 :         //'1'
+    (event.keyCode == 50) ? n = 1 :         //'2'
+    (event.keyCode == 51) ? n = 2 :         //'3'
+    (event.keyCode == 52) ? n = 3 :         //'4'
+    (event.keyCode == 53) ? n = 4 :         //'5'
+    (event.keyCode == 54) ? n = 5 : n;      //'6'
+    
+    if (event.keyCode == 32){               //space bar
+        event.preventDefault();             //prevent page down
+        toggle();                           //toggle autoplay
     }
-    else if(event.keyCode == 39){
-        if (slideNumber == 5) {n = 0}
-        else (n = slideNumber + 1)
-        setSlideNumber(n);
-    }
-    else if(event.keyCode == 32){
-        event.preventDefault();
-        autoplay();
-    }
-    else if(event.keyCode == 49){
-        setSlideNumber(0);
-    }
-    else if(event.keyCode == 50){
-        setSlideNumber(1);
-    }
-    else if(event.keyCode == 51){
-        setSlideNumber(2);
-    }
-    else if(event.keyCode == 52){
-        setSlideNumber(3);
-    }
-    else if(event.keyCode == 53){
-        setSlideNumber(4);
-    }
-    else if(event.keyCode == 54){
-        setSlideNumber(5);
-    }
+    else {setImgNumber(n);}                 //go to relevant image
 }
-setInterval(updateImage, 2000);
+
+setInterval(autoplay, 2000);                //check if autoplay is 'on'

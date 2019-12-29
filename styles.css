@@ -1,36 +1,38 @@
-html, body, div, span, applet, object, iframe, 
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {                  /*Found this code that initialises formatting to help fix unexpected browser bugs*/
-    border:         0;
-	margin:         0;
-	padding:        0;
+/*I've tried to format this stylesheet such that the variables are set alphabetically in three sections:
+- how the element is positioned
+- how the element looks
+- how the element behaves
+
+This makes it look neater to me and has made it easier to debug / deduplicate code.*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, 
+dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, 
+tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, 
+legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, 
+canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, 
+nav, output, ruby, section, summary, time, mark, audio, 
+video {                                          /*found this code that initialises formatting to help fix unexpected browser bugs*/
+    border:  0;
+	margin:  0;
+	padding: 0;
     
     font:           inherit;
 	font-size:      100%;
 	vertical-align: baseline;
 }
 
-:root {                                     /*Global CSS style*/
-    color:           #444545;             /*Default font colour - see colour palette in Plan folder*/
-    font-family:     'Quicksand', sans-serif;/*Lovely font with sans serif back up*/
+:root {                                          /*global CSS style*/
+    color:       #444545;                      /*default font colour - see colour palette in Plan folder*/
+    font-family: 'Quicksand',sans-serif;         /*lovely font with sans serif back up*/
     
-    overflow-x:      hidden;                /*I don't like a sideways scroll!*/
-    scroll-behavior: smooth;                /*For smooth scrolling in nav and carousel*/
+    overflow-x:      hidden;                     /*I don't want a sideways scroll..!*/
+    scroll-behavior: smooth;                     /*for smooth scrolling in nav*/
 }
 
 
-.hidden {                                   /*Invisible point in page for nav scrolling*/
-    display:absolute;
+.hidden {                                        /*invisible point in page for nav scrolling*/
+    display:          absolute;
     height:           70px;
     width:            0px;
     
@@ -40,50 +42,50 @@ time, mark, audio, video {                  /*Found this code that initialises f
 
 .navbar {          
     background-color: #166088;
-    display:          flex;                  /*Navbar made with flexbox..*/
-    flex-direction:   row;                   /*..with boxes in a row*/
+    display:          flex;                      /*navbar made with flexbox..*/
+    flex-direction:   row;                       /*..with boxes in a row*/
     height:           75px; 
     left:             0;
-    max-width:        100%;                  /*Making sure navbar doesn't extend outside visible window*/
-    position:         fixed;                 /*Fixing navbar to top of window*/
+    max-width:        100%;                      /*making sure navbar doesn't extend outside visible window*/
+    position:         fixed;                     /*fixing navbar to top of window*/
     top:              0;
     width:            100%;
-    z-index:          1;                     /*Always in front of other page elements*/
+    z-index:          1;                         /*always in front of other page elements*/
     
-    text-align:       center;
+    text-align: center;
 }
 
 .nav-item {
     align-items:     center;
     display:         flex;
-    flex-basis:      100%;                   /*Each item the same size as each other*/
+    flex-basis:      100%;                       /*each item the same size as each other*/
     flex-direction:  row;
     height:          100%;
-    justify-content: space-around;           /*Spacing each item*/
+    justify-content: space-around;               /*spacing each item*/
     width:           100%;
     
-    color:           #DBE9EE;
-    font-size:       25px;
+    color:     #DBE9EE;
+    font-size: 25px;
 }
 
 .nav-item > a {
-    padding:         20px 0;
-    width:           inherit;
+    padding: 20px 0;
+    width:   inherit;
     
     color:           inherit;
-    text-decoration: inherit;                /*Prevent link decoration on text*/
+    text-decoration: inherit;                    /*prevent link decoration on text*/
 }
 
-.nav-item:hover {                            /*Highlighting navbar selection*/
-    color:     white;
+.nav-item:hover {                                /*highlighting navbar selection*/
+    color:       white;
     font-weight: 900;
 }
 
 .whole-page {
-    display:          flex;
-    flex-direction:   column;                /*Rest of page is a large vertical flexbox*/
-    margin-top:       5px;
-    position:         relative;
+    display:        flex;
+    flex-direction: column;                      /*rest of page is a large vertical flexbox*/
+    margin-top:     5px;
+    position:       relative;
     
     background-color: #DBE9EE;
 }
@@ -95,18 +97,18 @@ time, mark, audio, video {                  /*Found this code that initialises f
     position:        relative;
     width:           100%;
     
-    text-align:      center;
+    text-align: center;
 }
 
 .links {
     display:         flex;
-    flex-basis:      100%;                  /*Each link the same relative size by default*/
+    flex-basis:      100%;                       /*each link the same relative size by default*/
     flex-direction:  row;
     height:          100%;
     justify-content: space-around;
     width:           100%;
     
-    transition:      all 0.6s;              /*make transitions last 0.6s - see related :hover class*/
+    transition: all 0.6s;                        /*make transitions last 0.6s - see related :hover class*/
 }
 
 .links > a {
@@ -116,9 +118,9 @@ time, mark, audio, video {                  /*Found this code that initialises f
 }
 
 .links:hover {
-    flex-basis:       140%;                 /*Grow associated box by relatively 140%*/
+    flex-basis:       140%;                      /*grow associated box by relatively 140%*/
     
-    background-color: #A1CDF4;            /*Change colour*/
+    background-color: #A1CDF4;                   /*change colour*/
 }
 
 .title {
@@ -149,13 +151,13 @@ time, mark, audio, video {                  /*Found this code that initialises f
 .apply-why{
     display:         flex;
     flex-direction:  row;
-    flex-wrap:       wrap;                  /*Push sections around based on available width*/
+    flex-wrap:       wrap;                       /*push sections around based on available width*/
     justify-content: center;
     width:           100%;
 }
 
 .why-desc {
-    width: 250px;                           /*fixed width for wrapping*/
+    width: 250px;                                /*fixed width for wrapping*/
 }
 
 .copy {
@@ -177,9 +179,9 @@ h1 {
 }
 
 h2 {
-    margin:      10px 0 0 30px;
+    margin: 10px 0 0 30px;
     
-    color:     #997E72;
+    color:       #997E72;
     font-size:   50px;
     font-weight: 800;
 }
@@ -199,27 +201,27 @@ li {
 }
 
 .carousel-box {
-    border:      2px solid #444545;
-    height:      404px;
-    margin:      20px 0 50px 0;
-    width:       720px;                     /*Photos set to 720px*/
+    border: 2px solid #444545;
+    height: 404px;
+    margin: 20px 0 50px 0;
+    width:  720px;                               /*photos set to 720px*/
     
-    text-align:  center;
+    text-align: center;
     
-    overflow:    hidden;                    /*Hide everything outside frame*/
-    user-select: none;                      /*Supress cursor over images*/
+    overflow:    hidden;                         /*hide everything outside frame*/
+    user-select: none;                           /*supress cursor over images*/
 }
 
-.carousel-image {                           /*Ensure images are where they need to be*/
+.carousel-image {                                /*ensure images are where they need to be*/
     float:   left;
     margin:  0px;
     padding: 0px;
 }
 
 .image-box {
-    height :    404px;
-    position:   relative;
-    width:      4320px;                     /*All images in one long row*/
+    height :  404px;
+    position: relative;
+    width:    4320px;                            /*all images in one long row*/
 }
 
 #imageBox {
@@ -227,43 +229,45 @@ li {
 }
 
 #autoplay-button {
-    
-    position: relative;
-    padding: 5px 10px;
-    outline: none;
-    display:inline-flex;
-    top:      -390px;                        /*Overlay image with navigation buttons*/
     align-items: center;
-    color: #dbe9ee;
-    border: 2px solid #dbe9ee;
-    background-color: rgba(22, 96, 136, 0.7)
+    display:     inline-flex;
+    outline:     none;
+    padding:     5px 10px;
+    position:    relative;
+    top:         -390px;                         /*overlay image with navigation buttons*/
+    
+    background-color: rgba(68, 69, 6, 0.6);
+    border:           2px solid #dbe9ee;
+    color:            #dbe9ee;
 }
 
-#auto-on {
-    height: 10px;
-    width: 10px;
+#autoIndicator {                                 /*indicator light for autoscroll toggle*/ 
     border-radius: 50%;
+    height: 10px;
     margin-left: 10px;
-    background-color: rgba(247,63,58, 0.7); /*olive: 61,153,112*/
+    width: 10px;
+    
+    background-color: rgba(247,63,58, 0.7);      /*set to tomato, rather than olive rgb(61,153,112)*/
 }
 
 #autoplay-button:hover {
-    box-shadow: 0 0 10px #a1cdf4;
+    border: 2px solid #a1cdf4;
 }
 
 .button-box {
     position: relative;
-    top:      -60px;                        /*Overlay image with navigation buttons*/
+    top:      -60px;                             /*overlay image with navigation buttons*/
 }
 
 .carousel-button {
-    border:           2px solid #dbe9ee;
-    display:          inline-block;
-    height:           16px;
-    margin:           0px 7px;
+    display: inline-block;
+    height:  16px;
+    margin:  0px 7px;
     outline: none;
-    width:            12px;
+    width:   12px;
+    
     background-color: #166088;
+    border:           2px solid #dbe9ee;
 }
 
 #carBut0 {
@@ -271,15 +275,15 @@ li {
 }
 
 .carousel-button:hover {
-    box-shadow: 0 0 10px 2px #a1cdf4;
+    border: 2px solid white;
 }
 
 
 .footer {
-    display:          flex;
-    flex-direction:   row;
-    height:           80px;
-    width:            100%;
+    display:        flex;
+    flex-direction: row;
+    height:         80px;
+    width:          100%;
     
     background-color: #444545;
     color:            #DBE9EE;
@@ -287,15 +291,15 @@ li {
     text-align:       center;
 }
 
-@media only screen and (max-width: 735px) {    /*Edits for smaller screen*/
+@media only screen and (max-width: 735px) {      /*edits for smaller screen*/
     .navbar {
-        height:150px;                          /*Make navbar easier to see on smaller screens*/
+        height:150px;                            /*make navbar easier to see on smaller screens*/
     }
 
     .nav-item {
-        border:      1px dashed #DBE9EE;     /*Outline links for clear delineation*/
+        border: 1px dashed #DBE9EE;              /*outline links for clear delineation*/
         
-        font-size:   37px;                     /*Increase font size*/
+        font-size:   37px;                       /*increase font size*/
         font-weight: 900;
     }
 
@@ -312,18 +316,17 @@ li {
     }
 
     .links {
-        border:             1px dashed #166088;/*Outline instead of transition*/
-        
         background-color: #A1CDF4;
+        border:           1px dashed #166088;    /*outline instead of transition*/
     }
 
     .links:hover {
-        flex-basis:         100%;              /*Overwrite / prevent transition*/
+        flex-basis:         100%;                /*overwrite / prevent transition*/
         
         background-color: #A1CDF4;
     }
 
-    h2 {                                       /*Make all the text a bit bigger*/
+    h2 {                                         /*make all the text a bit bigger*/
         font-size: 45px;
     }
 

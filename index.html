@@ -1,9 +1,11 @@
+<!--This page structure is based on an initial design which can be found in the Plan folder at https://github.com/jackherizsmith/jackherizsmith.github.io/tree/master/Plan-->
+
 <head>
-    <link   rel = "stylesheet" type = "text/css" href = "styles.css">   <!--Linking to CSS doc-->
-    <link   href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">       <!--Importing a beaut font-->
+    <link   rel = "stylesheet" type = "text/css" href = "styles.css">                                   <!--Linking to CSS doc-->
+    <link   href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">     <!--Importing a beaut font-->
 </head>
 
-<main>                                                                                                  <!--Structure based on initial design on paper - see Plan folder-->
+<main>                                                                                                  
     <nav class="navbar">                                                                                <!--A nav bar fixed to the top of the screen-->
         <nav class="nav-item"><a href="#top"><img src="Logos\home-icon.png" alt="Home" height=50px></a></nav>      <!--Home button, etc-->
         <nav class="nav-item"><a href="#bio">Bio</a></nav>
@@ -26,8 +28,9 @@
         
         <div id="bio" class="hidden"></div>
         <section class="copy">            
-            <p><img class="face" src="Jack-face.jfif">Hey, I'm Jack. Here's my face. Thank you so much for visiting my first ever webpage,  which pulls together all the components 
-                of the rest of my application to join the Founders and Coders Spring 2020 cohort - it's a real pleasure to have you here.
+            <p><img class="face" src="Jack-face.jfif">Hey, I'm Jack. Here's my face. I'm applying to join your programme because I believe in the power of technology to make the 
+                world a better place. Thank you so much for visiting my first ever webpage,  which pulls together all the components of the rest of my application to join the Founders 
+                and Coders Spring 2020 cohort - it's a real pleasure to have you here.
             </br> </br>              
                 I've video'd myself saying a few words about the process of putting this site together, my experience with the prerequisites and also generally how enthusiastic I 
                 am about the work you do, below. I am so excited to be putting myself forward to learn with and play an active part in your awesome community of developers. 
@@ -36,9 +39,8 @@
                 career in partnership fundraising, first for Great Ormond Street and now with Shelter. You can see more details at my LinkedIn in the navigation above, and you could 
                 read through my recommendations there to get a sense of how I naturally find opportunities to collaborate with teams I'm a part of.
             </br> </br> 
-                I'm applying to join your programme because I believe in the power of technology to make the world a better place, and after lots of research and meeting with past 
-                and current cohortees, it is clear that Founders and Coders is the coding bootcamp that is offering a route to having the biggest social impact, whilst also 
-                encouraging and enabling its members to give back to its community.
+                After lots of research and meeting with past and current cohortees, it is clear that Founders and Coders is the coding bootcamp that is offering the clearest route to 
+                having the biggest social impact, whilst also encouraging and enabling its ambitiousdiverse members to give back to its community.
             </p>
         </section>
         
@@ -81,7 +83,7 @@
                 
                 <section class="carousel-box">                                                              <!--The container of the carousel-->
                     
-                    <div class="image-box" id="imageBox">                                                                 <!--The box containing the visible image-->
+                    <div class="image-box" id="imageBox">                                                   <!--The box containing the visible image-->
                         <img src="Carousel\1.jpg" alt="winter-trees"    class="carousel-image">             <!--Each image-->
                         <img src="Carousel\2.jpg" alt="neon-tokyo"      class="carousel-image">
                         <img src="Carousel\3.jpg" alt="rainbow-canyon"  class="carousel-image">
@@ -90,29 +92,29 @@
                         <img src="Carousel\6.jpg" alt="starry-desert"   class="carousel-image">
                     </div>
 
-                    <button id="autoplay-button" onclick="autoplay()">
+                    <button id="autoplay-button" onclick="toggle()">
                         <p class="autoplay-text" style="font-size: 15px;">Autoplay</p>
-                        <div id="auto-on"></div>
+                        <div id="autoIndicator"></div>
                     </button>
                     
                     <div class="button-box">                                                                <!--The box containing navigation buttons-->
-                        <button class="carousel-button" id="carBut0" onclick="setSlideNumber(0)"></button>                            <!--The image each button links to-->
-                        <button class="carousel-button" id="carBut1" onclick="setSlideNumber(1)"></button>
-                        <button class="carousel-button" id="carBut2" onclick="setSlideNumber(2)"></button>
-                        <button class="carousel-button" id="carBut3" onclick="setSlideNumber(3)"></button>
-                        <button class="carousel-button" id="carBut4" onclick="setSlideNumber(4)"></button>
-                        <button class="carousel-button" id="carBut5" onclick="setSlideNumber(5)"></button>
+                        <button class="carousel-button" id="carBut0" onclick="setImgNumber(0)"></button>    <!--Update slide in view-->
+                        <button class="carousel-button" id="carBut1" onclick="setImgNumber(1)"></button>
+                        <button class="carousel-button" id="carBut2" onclick="setImgNumber(2)"></button>
+                        <button class="carousel-button" id="carBut3" onclick="setImgNumber(3)"></button>
+                        <button class="carousel-button" id="carBut4" onclick="setImgNumber(4)"></button>
+                        <button class="carousel-button" id="carBut5" onclick="setImgNumber(5)"></button>
                     </div>
 
                 </section>
             </div>
 
             
-            <p class="copy">You can navigate with left and right cursor keys, or press the number of 
+            <p class="copy">You can navigate with left and right cursor keys, or press the number of        <!--Specific guidance on interacting with carousel-->
                 the image you want. You can also press the space bar to toggle autoplay, which is indicated
                 'on' with the green light and 'off' with the red.<br><br></p>
         
-        <footer class="footer">                                                                         <!--Footer containing other links that summarise all my periphery work on this application-->
+        <footer class="footer">                                                                             <!--Footer containing other links that summarise all my periphery work on this application-->
             <div class="nav-item"><a href="https://codepen.io/eskimofeet/full/rNNvxdj">CodePen project</a></div>
             <div class="nav-item"><a href="https://docs.google.com/document/d/1Jvvob23ZbaDxfS71kcE3AuZ-A9BfY0peRaHcbH2fNJw/edit?usp=sharing">Free resources</a></div>
             <div class="nav-item"><a href="https://docs.google.com/document/d/1W0QdeSZcxhr7tMSdev9rpCc4K0jow3uJ2ewUrXXovkI/edit?usp=sharing">FCC notes</a></div>
