@@ -235,6 +235,7 @@ li {
     background-color: rgba(247,63,58, 0.7); /*olive: 61,153,112*/
     color: #dbe9ee;
     border: 1px solid #444545;
+    border-radius: 10px;
 }
 
 .button-box {
@@ -246,40 +247,18 @@ li {
     border:           2px solid #444545;
     border-radius:    50%;                  /*Nice round buttons*/
     display:          inline-block;
-    height:           12px;
+    height:           16px;
     margin:           0px 7px;
+    outline: none;
     width:            12px;
     
     background-color: #DBE9EE;
 }
 
 .carousel-button:hover {
-    background-color: #166088;            /*Fill round buttons on hover*/
+    box-shadow: ;
 }
 
-#carousel-image-1:target ~ .image-box {
-    left: 0px;                              /*Push row to specific location depending on choice*/
-}
-
-#carousel-image-2:target ~ .image-box {
-    left: -720px;
-}
-
-#carousel-image-3:target ~ .image-box {
-    left: -1440px;
-}
-
-#carousel-image-4:target ~ .image-box {
-    left: -2160px;
-}
-
-#carousel-image-5:target ~ .image-box {
-    left: -2880px;
-}
-
-#carousel-image-6:target ~ .image-box {
-    left: -3600px;
-}
 
 .footer {
     display:          flex;
@@ -339,19 +318,6 @@ li {
 
     p {
         font-size: 35px;
-    }
-
-    .button-box {
-        position:   relative;
-        top:        -40px;
-    }
-    .carousel-button {                         /*Make carousel buttons bigger*/
-        border:        3px solid #444545;
-        border-radius: 50%;
-        display:       inline-block;
-        height:        20px;
-        margin:        0px 15px;
-        width:         20px;
     }
 
     .footer {

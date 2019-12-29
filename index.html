@@ -1,6 +1,7 @@
 <head>
     <link   rel = "stylesheet" type = "text/css" href = "styles.css">   <!--Linking to CSS doc-->
     <link   href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">       <!--Importing a beaut font-->
+    <script src="script.js"></script>
 </head>
 
 <main>                                                                                                  <!--Structure based on initial design on paper - see Plan folder-->
@@ -80,14 +81,8 @@
             <div style="margin:auto">                                                                       <!--A carousel that contains a row of six photos, with a viewport that only shows one at a time-->
                 
                 <section class="carousel-box">                                                              <!--The container of the carousel-->
-                    <span id="carousel-image-1"></span>                                                     <!--Position of image to scroll to-->
-                    <span id="carousel-image-2"></span>
-                    <span id="carousel-image-3"></span>
-                    <span id="carousel-image-4"></span>
-                    <span id="carousel-image-5"></span>
-                    <span id="carousel-image-6"></span>
                     
-                    <div class="image-box">                                                                 <!--The box containing the visible image-->
+                    <div class="image-box" id = "imageBox">                                                                 <!--The box containing the visible image-->
                         <img src="Carousel\1.jpg" alt="winter-trees"    class="carousel-image">             <!--Each image-->
                         <img src="Carousel\2.jpg" alt="neon-tokyo"      class="carousel-image">
                         <img src="Carousel\3.jpg" alt="rainbow-canyon"  class="carousel-image">
@@ -101,12 +96,12 @@
                     </button>
                     
                     <div class="button-box">                                                                <!--The box containing navigation buttons-->
-                        <a href="#carousel-image-1" class="carousel-button"></a>                            <!--The image each button links to-->
-                        <a href="#carousel-image-2" class="carousel-button"></a>
-                        <a href="#carousel-image-3" class="carousel-button"></a>
-                        <a href="#carousel-image-4" class="carousel-button"></a>
-                        <a href="#carousel-image-5" class="carousel-button"></a>
-                        <a href="#carousel-image-6" class="carousel-button"></a>
+                        <button class="carousel-button" id="carBut0" onclick="setSlideNumber(0)"></button>                            <!--The image each button links to-->
+                        <button class="carousel-button" id="carBut1" onclick="setSlideNumber(1)"></button>
+                        <button class="carousel-button" id="carBut2" onclick="setSlideNumber(2)"></button>
+                        <button class="carousel-button" id="carBut3" onclick="setSlideNumber(3)"></button>
+                        <button class="carousel-button" id="carBut4" onclick="setSlideNumber(4)"></button>
+                        <button class="carousel-button" id="carBut5" onclick="setSlideNumber(5)"></button>
                     </div>
 
                 </section>
@@ -119,6 +114,5 @@
             <div class="nav-item"><a href="https://docs.google.com/document/d/1LUB0_cVJp-wHNC7Wz7MtdOmEbbF6cDoka7xFwgrkCfA/edit?usp=sharing" target="_blank">Udemy courses</a></div>
         </footer>
     </div> 
-    <script src="script.js"></script>
 </main>
 
