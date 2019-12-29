@@ -228,6 +228,7 @@ li {
     
     position: relative;
     padding: 5px 10px;
+    outline: none;
     display:inline-flex;
     top:      -390px;                        /*Overlay image with navigation buttons*/
     align-items: center;
