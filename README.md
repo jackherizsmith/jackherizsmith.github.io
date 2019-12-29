@@ -16,7 +16,7 @@ For the most part, the contrast of foreground and background is 7.74. The navbar
 
 ## Image carousel
 
-Originally I hadn't appreciated the need for the carousel to autoplay and accept left / right cursor interaction. I'm not sure I can work it all out in time... Watch this space...
+The image carousel can be navigated in a number of ways. As before, simply clicking the navigation buttons works, otherwise the user can select which image they want to scroll to by selecting it's corresponding number on the keyboard. The user can also toggle autoplay by pressing the spacebar, or use the left and right cursor to move left or right.
 
 ## Further development
 
