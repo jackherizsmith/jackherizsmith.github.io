@@ -220,7 +220,9 @@ li {
     height :    404px;
     position:   relative;
     width:      4320px;                     /*All images in one long row*/
-    
+}
+
+#imageBox {
     transition: left 1s;
 }
 
@@ -232,31 +234,44 @@ li {
     display:inline-flex;
     top:      -390px;                        /*Overlay image with navigation buttons*/
     align-items: center;
-    background-color: rgba(247,63,58, 0.7); /*olive: 61,153,112*/
     color: #dbe9ee;
-    border: 1px solid #444545;
-    border-radius: 10px;
+    border: 2px solid #dbe9ee;
+    background-color: rgba(22, 96, 136, 0.7)
+}
+
+#auto-on {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: rgba(247,63,58, 0.7); /*olive: 61,153,112*/
+}
+
+#autoplay-button:hover {
+    box-shadow: 0 0 10px #a1cdf4;
 }
 
 .button-box {
     position: relative;
-    top:      -75px;                        /*Overlay image with navigation buttons*/
+    top:      -60px;                        /*Overlay image with navigation buttons*/
 }
 
 .carousel-button {
-    border:           2px solid #444545;
-    border-radius:    50%;                  /*Nice round buttons*/
+    border:           2px solid #dbe9ee;
     display:          inline-block;
     height:           16px;
     margin:           0px 7px;
     outline: none;
     width:            12px;
-    
-    background-color: #DBE9EE;
+    background-color: #166088;
+}
+
+#carBut0 {
+    background-color: #a1cdf4;
 }
 
 .carousel-button:hover {
-    box-shadow: ;
+    box-shadow: 0 0 10px 2px #a1cdf4;
 }
 
 
