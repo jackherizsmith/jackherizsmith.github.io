@@ -14,7 +14,9 @@ I've also included links at the bottom of the page in case it's of interest - th
 
 For the most part, the contrast of foreground and background is 7.74. The navbar has a contrast of 5.5 which meets most WCAG guidelines, whilst the footer failed with a contrast of 3... So I have corrected the background to the darker palette option.
 
+## Image carousel
 
+Originally I hadn't appreciated the need for the carousel to autoplay and accept left / right cursor interaction. I'm not sure I can work it all out in time... Watch this space...
 
 ## Further development
 

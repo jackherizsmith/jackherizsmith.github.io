@@ -1,6 +1,6 @@
 <head>
-    <link rel = "stylesheet" type = "text/css" href = "styles.css">                                     <!--Linking to CSS doc-->
-    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">       <!--Importing a beaut font-->
+    <link   rel = "stylesheet" type = "text/css" href = "styles.css">   <!--Linking to CSS doc-->
+    <link   href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">       <!--Importing a beaut font-->
 </head>
 
 <main>                                                                                                  <!--Structure based on initial design on paper - see Plan folder-->
@@ -8,7 +8,7 @@
         <nav class="nav-item"><a href="#top"><img src="Logos\home-icon.png" alt="Home" height=50px></a></nav>      <!--Home button, etc-->
         <nav class="nav-item"><a href="#bio">Bio</a></nav>
         <nav class="nav-item"><a href="#why-section">Why me?</a></nav>
-        <nav class="nav-item"><a href="#carousel">Photos</a></nav>
+        <nav class="nav-item"><a href="#carousel-image-1">Photos</a></nav>
         <nav class="nav-item"><a href="https://www.linkedin.com/in/jherizsmith/" target="_blank"><img src="Logos\linkedin-logo-small.png" alt="LinkedIn"></a></nav>
     </nav>
     
@@ -75,37 +75,42 @@
                 </ul>
             </div>
         </section> 
+        
+        <h2 id="carousel">My favourite desktops</h2>
+            <div style="margin:auto">                                                                       <!--A carousel that contains a row of six photos, with a viewport that only shows one at a time-->
+                
+                <section class="carousel-box">                                                              <!--The container of the carousel-->
+                    <span id="carousel-image-1"></span>                                                     <!--Position of image to scroll to-->
+                    <span id="carousel-image-2"></span>
+                    <span id="carousel-image-3"></span>
+                    <span id="carousel-image-4"></span>
+                    <span id="carousel-image-5"></span>
+                    <span id="carousel-image-6"></span>
+                    
+                    <div class="image-box">                                                                 <!--The box containing the visible image-->
+                        <img src="Carousel\1.jpg" alt="winter-trees"    class="carousel-image">             <!--Each image-->
+                        <img src="Carousel\2.jpg" alt="neon-tokyo"      class="carousel-image">
+                        <img src="Carousel\3.jpg" alt="rainbow-canyon"  class="carousel-image">
+                        <img src="Carousel\4.jpg" alt="nessie-photos"   class="carousel-image">
+                        <img src="Carousel\5.jpg" alt="planet-horizons" class="carousel-image">
+                        <img src="Carousel\6.jpg" alt="starry-desert"   class="carousel-image">
+                    </div>
 
-        <h2 id="carousel">My favourite desktops</h2 >
-        <div style="margin:auto">                                                                       <!--A carousel that contains a row of six photos, with a viewport that only shows one at a time-->
-            
-            <section class="carousel-box">                                                              <!--The container of the carousel-->
-                <span id="carousel-image-1"></span>                                                     <!--Position of image to scroll to-->
-                <span id="carousel-image-2"></span>
-                <span id="carousel-image-3"></span>
-                <span id="carousel-image-4"></span>
-                <span id="carousel-image-5"></span>
-                <span id="carousel-image-6"></span>
-                
-                <div class="image-box">                                                                 <!--The box containing the visible image-->
-                    <img src="Carousel\1.jpg" alt="winter-trees"    class="carousel-image">             <!--Each image-->
-                    <img src="Carousel\2.jpg" alt="neon-tokyo"      class="carousel-image">
-                    <img src="Carousel\3.jpg" alt="rainbow-canyon"  class="carousel-image">
-                    <img src="Carousel\4.jpg" alt="nessie-photos"   class="carousel-image">
-                    <img src="Carousel\5.jpg" alt="planet-horizons" class="carousel-image">
-                    <img src="Carousel\6.jpg" alt="starry-desert"   class="carousel-image">
-                </div>
-                
-                <div class="button-box">                                                                <!--The box containing navigation buttons-->
-                    <a href="#carousel-image-1" class="carousel-button"></a>                            <!--The image each button links to-->
-                    <a href="#carousel-image-2" class="carousel-button"></a>
-                    <a href="#carousel-image-3" class="carousel-button"></a>
-                    <a href="#carousel-image-4" class="carousel-button"></a>
-                    <a href="#carousel-image-5" class="carousel-button"></a>
-                    <a href="#carousel-image-6" class="carousel-button"></a>
-                </div>
+                    <button id="autoplay-button" onclick="autoplay()">
+                        <p class="autoplay text">Autoplay</p>
+                    </button>
+                    
+                    <div class="button-box">                                                                <!--The box containing navigation buttons-->
+                        <a href="#carousel-image-1" class="carousel-button"></a>                            <!--The image each button links to-->
+                        <a href="#carousel-image-2" class="carousel-button"></a>
+                        <a href="#carousel-image-3" class="carousel-button"></a>
+                        <a href="#carousel-image-4" class="carousel-button"></a>
+                        <a href="#carousel-image-5" class="carousel-button"></a>
+                        <a href="#carousel-image-6" class="carousel-button"></a>
+                    </div>
+
+                </section>
             </div>
-        </section>
         
         <footer class="footer">                                                                         <!--Footer containing other links that summarise all my periphery work on this application-->
             <div class="nav-item"><a href="https://codepen.io/eskimofeet/full/rNNvxdj">CodePen project</a></div>
@@ -113,5 +118,7 @@
             <div class="nav-item"><a href="https://docs.google.com/document/d/1W0QdeSZcxhr7tMSdev9rpCc4K0jow3uJ2ewUrXXovkI/edit?usp=sharing">FCC notes</a></div>
             <div class="nav-item"><a href="https://docs.google.com/document/d/1LUB0_cVJp-wHNC7Wz7MtdOmEbbF6cDoka7xFwgrkCfA/edit?usp=sharing" target="_blank">Udemy courses</a></div>
         </footer>
-    </div>
+    </div> 
+    <script src="script.js"></script>
 </main>
+
