@@ -29,8 +29,8 @@ function setOffset(imgNumber){
 
 /* Takes the new slide number and updates the button colours and slideNumber variable */
 function setImgNumber(n){
-    document.getElementById(`carBut${imgNumber}`).style.backgroundColor = '#166088'; //reset last button colour
-    document.getElementById(`carBut${n}`).style.backgroundColor         = '#a1cdf4'; //set new button colour
+    document.getElementById(`carouselButton${imgNumber}`).style.backgroundColor = '#166088'; //reset last button colour
+    document.getElementById(`carouselButton${n}`).style.backgroundColor         = '#a1cdf4'; //set new button colour
     imgNumber = n;
     setOffset(imgNumber);                   //use new slideNumber value to offset images as/if required
 }
