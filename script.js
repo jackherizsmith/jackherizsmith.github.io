@@ -39,12 +39,7 @@ function setImgNumber(n){
 document.onkeydown = function(event) {
     (event.keyCode == 37) ? (imgNumber == 0) ? n = 5 : n = imgNumber - 1 : //left cursor
     (event.keyCode == 39) ? (imgNumber == 5) ? n = 0 : n = imgNumber + 1 : //right cursor
-    (event.keyCode == 49) ? n = 0 :         //'1'
-    (event.keyCode == 50) ? n = 1 :         //'2'
-    (event.keyCode == 51) ? n = 2 :         //'3'
-    (event.keyCode == 52) ? n = 3 :         //'4'
-    (event.keyCode == 53) ? n = 4 :         //'5'
-    (event.keyCode == 54) ? n = 5 : n;      //'6'
+    (event.keyCode >= 49 && event.keyCode <= 54) ? n = event.keyCode-49 : n; //'1' -> '6'
     
     if (event.keyCode == 32){               //space bar
         event.preventDefault();             //prevent page down
