@@ -141,13 +141,6 @@ video {                                          /*found this code that initiali
     width:         250px;
 }
 
-.video {
-    display:         flex;
-    justify-content: space-around;
-    margin:          40px 0px;
-    width:           100%;
-}
-
 .apply-why{
     display:         flex;
     flex-direction:  row;
