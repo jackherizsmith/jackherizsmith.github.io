@@ -1,130 +1,131 @@
 <!--This page structure is based on an initial design which can be found in the Plan folder at https://github.com/jackherizsmith/jackherizsmith.github.io/tree/master/Plan-->
 
 <!DOCTYPE html>
-<head>
-    <title>Jack's FAC Application Website</title>
-    <link   rel = "stylesheet" type = "text/css" href = "styles.css">                                   <!--Linking to CSS doc-->
-    <link   href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">     <!--Importing a beaut font-->
-</head>
+<html lang="en">
+    <head>
+        <title>Jack's FAC Application Website</title>
+        <link   rel = "stylesheet" type = "text/css" href = "styles.css">                                   <!--Linking to CSS doc-->
+        <link   href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">     <!--Importing a beaut font-->
+    </head>
 
-<main lang="en">                                                                                                  
-    <nav class="navbar">                                                                                <!--A nav bar fixed to the top of the screen-->
-        <nav class="nav-item"><a href="#top"><img src="Logos\home-icon.png" alt="Home" height=50px></a></nav>      <!--Home button, etc-->
-        <nav class="nav-item"><a href="#bio">Bio</a></nav>
-        <nav class="nav-item"><a href="#why-section">Why me?</a></nav>
-        <nav class="nav-item"><a href="#carousel">Photos</a></nav>
-        <nav class="nav-item"><a href="https://www.linkedin.com/in/jherizsmith/" target="_blank"><img src="Logos\linkedin-logo-small.png" alt="LinkedIn"></a></nav>
-    </nav>
-    
-    <div name="top" class="hidden"></div>                                                               <!--A hidden div to scroll to-->
-    <div class="whole-page">                                                                            <!--Setting the rest of the page separate from navbar-->
-        <div class="links-header">                                                                      <!--Links to application pre-requisites-->
-            
-            <div class="links"><a href="https://github.com/jackherizsmith/jackherizsmith.github.io" target="_blank"><img src="Logos\github-logo.svg"         alt="GitHub"   height=100px></a></div>
-            <div class="links"><a href="https://www.freecodecamp.org/jackherizsmith"                target="_blank"><img src="Logos\free-code-camp-logo.svg" alt="FCC"      height=100px></a></div>
-            <div class="links"><a href="https://www.codewars.com/users/jackherizsmith"              target="_blank"><img src="Logos\codewars-logo.png"       alt="CodeWars" height=100px></a></div>
+    <main>                                                                                                  
+        <nav class="navbar">                                                                                <!--A nav bar fixed to the top of the screen-->
+            <nav class="nav-item"><a href="#top"><img src="Logos\home-icon.png" alt="Home" height=50px></a></nav>      <!--Home button, etc-->
+            <nav class="nav-item"><a href="#bio">Bio</a></nav>
+            <nav class="nav-item"><a href="#why-section">Why me?</a></nav>
+            <nav class="nav-item"><a href="#carousel">Photos</a></nav>
+            <nav class="nav-item"><a href="https://www.linkedin.com/in/jherizsmith/" target="_blank"><img src="Logos\linkedin-logo-small.png" alt="LinkedIn"></a></nav>
+        </nav>
         
-        </div>                                                                                          <!--I wanted the links to look nice when hovering, see CSS .links class-->
-        
-        <h1 class="title" style="margin:auto">My application for Founders and Coders</h1>               <!--Main header-->
-        
-        <div id="bio" class="hidden"></div>
-        <section class="copy">            
-            <p><img class="face" src="Jack-face.jfif" alt="Jack's face">Hey, I'm Jack. Here's my face. I'm applying to join your programme because I believe in the power of technology to make the 
-                world a better place. Thank you so much for visiting my first ever website that I've built from scratch, which pulls together all the components of the rest of 
-                my application to join the Founders and Coders Spring 2020 cohort - it's a real pleasure to have you here.
-            </br> </br>              
-                This website is a culmination of work I have done in the last couple of months, before work and at weekends, learning HTML, CSS and JavaScript. I have really enjoyed 
-                working through the application pre-requisites, which have sometimes been challenging but especially in the case of CodeWars, extremely satisfying. 
-                I am passionate about social impact,and really believe in your approach to training the next generation of coders. I am so excited to be putting myself forward to 
-                learn with and play an active part alongside your awesome community of developers. 
-            </br> </br> 
-                A very quick background: I studied engineering at university during which time I did a bit of C++ coding - I loved it. When I graduated in 2013 it was to pursue a 
-                career in partnership fundraising, first for Great Ormond Street and now with Shelter. Twelve months ago I became a trustee for a tiny human rights charity based 
-                in London, so have seen the financial pressures around web development on small NGOs first hand. You can read more about what I've been up to on my LinkedIn in the 
-                navigation above, and you could read through my recommendations there to get a sense of how I naturally find opportunities to collaborate within and across teams.
-            </br> </br> 
-                It's time for me to leave fundraising, and I want to get back to building things that people want to use, for the benefit of society. After lots of research and 
-                meeting with past and current cohortees, Founders and Coders is the coding bootcamp that is offering the clearest route to having the biggest social impact 
-                whilst working alongside the most diverse people - which is super important in engineering (and every field).
-            </p>
-        </section>
-        
-        <div id="why-section" class="hidden"></div>
-        <h2>Why am I applying?</h2>
-        <section class="apply-why">                                                                      <!--Going for three sections that wrap using Flexbox, depending on window width-->
-            <div class="copy">
-                <h3 class="why-title">Community</h3>
-                <ul>                                                                                     <!--Decided on unordered lists for this section-->
-                    <li><p class="why-desc">Working with ambitious and diverse coders</p></li>
-                    <li><p class="why-desc">Opportunity to teach others during & after course</p></li>
-                    <li><p class="why-desc">Alumni network & events</p></li>
-                </ul>
-            </div>
-
-            <div class="copy">
-                <h3 class="why-title">Course</h3>
-                <ul>
-                    <li><p class="why-desc">Tech for Better - this is exactly the kind of work I plan to do long-term</p></li>
-                    <li><p class="why-desc">Focus on pair programming</p></li>
-                    <li><p class="why-desc">Opportunity to make an impact with meaningful projects</p></li>
-                </ul>
-            </div>
-
-            <div class="copy">
-                <h3 class="why-title">Career</h3>
-                <ul>
-                    <li><p class="why-desc">Ideal launchpad for building my career in charity / social enterprise</p></li>
-                    <li><p class="why-desc">An invaluable network of socially conscious coders</p></li>
-                    <li><p class="why-desc">A proven track record of successful graduates</p></li>
-                </ul>
-            </div>
-        </section> 
-        
-        <h2 id="carousel">My favourite desktops</h2>
-            <div style="margin:auto">                                                                       <!--A carousel that contains a row of six photos, with a viewport that only shows one at a time-->
+        <div name="top" class="hidden"></div>                                                               <!--A hidden div to scroll to-->
+        <div class="whole-page">                                                                            <!--Setting the rest of the page separate from navbar-->
+            <div class="links-header">                                                                      <!--Links to application pre-requisites-->
                 
-                <section class="carousel-box">                                                              <!--The container of the carousel-->
-                    
-                    <div class="image-box" id="imageBox">                                                   <!--The box containing the visible image-->
-                        <img src="Carousel\1.jpg" alt="winter-trees"    class="carousel-image">             <!--Each image-->
-                        <img src="Carousel\2.jpg" alt="neon-tokyo"      class="carousel-image">
-                        <img src="Carousel\3.jpg" alt="rainbow-canyon"  class="carousel-image">
-                        <img src="Carousel\4.jpg" alt="nessie-photos"   class="carousel-image">
-                        <img src="Carousel\5.jpg" alt="planet-horizons" class="carousel-image">
-                        <img src="Carousel\6.jpg" alt="starry-desert"   class="carousel-image">
-                    </div>
-
-                    <button id="autoplay-button" onclick="toggle()">
-                        <p class="autoplay-text" style="font-size: 15px;">Autoplay</p>
-                        <div id="autoIndicator"></div>
-                    </button>
-                    
-                    <div class="button-box">                                                                <!--The box containing navigation buttons-->
-                        <button class="carousel-button" id="carouselButton0" onclick="setImgNumber(0)" aria-label="image 1"></button>    <!--Update slide in view-->
-                        <button class="carousel-button" id="carouselButton1" onclick="setImgNumber(1)" aria-label="image 2"></button>
-                        <button class="carousel-button" id="carouselButton2" onclick="setImgNumber(2)" aria-label="image 3"></button>
-                        <button class="carousel-button" id="carouselButton3" onclick="setImgNumber(3)" aria-label="image 4"></button>
-                        <button class="carousel-button" id="carouselButton4" onclick="setImgNumber(4)" aria-label="image 5"></button>
-                        <button class="carousel-button" id="carouselButton5" onclick="setImgNumber(5)" aria-label="image 6"></button>
-                    </div>
-
-                </section>
-            </div>
-
+                <div class="links"><a href="https://github.com/jackherizsmith/jackherizsmith.github.io" target="_blank"><img src="Logos\github-logo.svg"         alt="GitHub"   height=100px></a></div>
+                <div class="links"><a href="https://www.freecodecamp.org/jackherizsmith"                target="_blank"><img src="Logos\free-code-camp-logo.svg" alt="FCC"      height=100px></a></div>
+                <div class="links"><a href="https://www.codewars.com/users/jackherizsmith"              target="_blank"><img src="Logos\codewars-logo.png"       alt="CodeWars" height=100px></a></div>
             
-            <p class="copy">If you have a keyboard, you can navigate with left and right cursor keys, or press <!--Specific guidance on interacting with carousel-->
-                the number of the image you want. You can also press the space bar to toggle autoplay, which is 
-                indicated 'on' with the green light and 'off' with the red.<br><br></p>
-        
-        <footer class="footer">                                                                             <!--Footer containing other links that summarise all my periphery work on this application-->
-            <div class="nav-item"><a href="https://codepen.io/eskimofeet/full/rNNvxdj">CodePen project</a></div>
-            <div class="nav-item"><a href="https://docs.google.com/document/d/1Jvvob23ZbaDxfS71kcE3AuZ-A9BfY0peRaHcbH2fNJw/edit?usp=sharing">Free resources</a></div>
-            <div class="nav-item"><a href="https://docs.google.com/document/d/1W0QdeSZcxhr7tMSdev9rpCc4K0jow3uJ2ewUrXXovkI/edit?usp=sharing">FCC notes</a></div>
-            <div class="nav-item"><a href="https://docs.google.com/document/d/1LUB0_cVJp-wHNC7Wz7MtdOmEbbF6cDoka7xFwgrkCfA/edit?usp=sharing" target="_blank">Udemy courses</a></div>
-        </footer>
-        <script>document.getElementById("imageBox").style.left = '0px'</script>
-        <script src="script.js"></script>
-    </div> 
-</main>
+            </div>                                                                                          <!--I wanted the links to look nice when hovering, see CSS .links class-->
+            
+            <h1 class="title" style="margin:auto">My application for Founders and Coders</h1>               <!--Main header-->
+            
+            <div id="bio" class="hidden"></div>
+            <section class="copy">            
+                <p><img class="face" src="Jack-face.jfif" alt="Jack's face">Hey, I'm Jack. Here's my face. I'm applying to join your programme because I believe in the power of technology to make the 
+                    world a better place. Thank you so much for visiting my first ever website that I've built from scratch, which pulls together all the components of the rest of 
+                    my application to join the Founders and Coders Spring 2020 cohort - it's a real pleasure to have you here.
+                </br> </br>              
+                    This website is a culmination of work I have done in the last couple of months, before work and at weekends, learning HTML, CSS and JavaScript. I have really enjoyed 
+                    working through the application pre-requisites, which have sometimes been challenging but especially in the case of CodeWars, extremely satisfying. 
+                    I am passionate about social impact,and really believe in your approach to training the next generation of coders. I am so excited to be putting myself forward to 
+                    learn with and play an active part alongside your awesome community of developers. 
+                </br> </br> 
+                    A very quick background: I studied engineering at university during which time I did a bit of C++ coding - I loved it. When I graduated in 2013 it was to pursue a 
+                    career in partnership fundraising, first for Great Ormond Street and now with Shelter. Twelve months ago I became a trustee for a tiny human rights charity based 
+                    in London, so have seen the financial pressures around web development on small NGOs first hand. You can read more about what I've been up to on my LinkedIn in the 
+                    navigation above, and you could read through my recommendations there to get a sense of how I naturally find opportunities to collaborate within and across teams.
+                </br> </br> 
+                    It's time for me to leave fundraising, and I want to get back to building things that people want to use, for the benefit of society. After lots of research and 
+                    meeting with past and current cohortees, Founders and Coders is the coding bootcamp that is offering the clearest route to having the biggest social impact 
+                    whilst working alongside the most diverse people - which is super important in engineering (and every field).
+                </p>
+            </section>
+            
+            <div id="why-section" class="hidden"></div>
+            <h2>Why am I applying?</h2>
+            <section class="apply-why">                                                                      <!--Going for three sections that wrap using Flexbox, depending on window width-->
+                <div class="copy">
+                    <h3 class="why-title">Community</h3>
+                    <ul>                                                                                     <!--Decided on unordered lists for this section-->
+                        <li><p class="why-desc">Working with ambitious and diverse coders</p></li>
+                        <li><p class="why-desc">Opportunity to teach others during & after course</p></li>
+                        <li><p class="why-desc">Alumni network & events</p></li>
+                    </ul>
+                </div>
 
+                <div class="copy">
+                    <h3 class="why-title">Course</h3>
+                    <ul>
+                        <li><p class="why-desc">Tech for Better - this is exactly the kind of work I plan to do long-term</p></li>
+                        <li><p class="why-desc">Focus on pair programming</p></li>
+                        <li><p class="why-desc">Opportunity to make an impact with meaningful projects</p></li>
+                    </ul>
+                </div>
+
+                <div class="copy">
+                    <h3 class="why-title">Career</h3>
+                    <ul>
+                        <li><p class="why-desc">Ideal launchpad for building my career in charity / social enterprise</p></li>
+                        <li><p class="why-desc">An invaluable network of socially conscious coders</p></li>
+                        <li><p class="why-desc">A proven track record of successful graduates</p></li>
+                    </ul>
+                </div>
+            </section> 
+            
+            <h2 id="carousel">My favourite desktops</h2>
+                <div style="margin:auto">                                                                       <!--A carousel that contains a row of six photos, with a viewport that only shows one at a time-->
+                    
+                    <section class="carousel-box">                                                              <!--The container of the carousel-->
+                        
+                        <div class="image-box" id="imageBox">                                                   <!--The box containing the visible image-->
+                            <img src="Carousel\1.jpg" alt="winter-trees"    class="carousel-image">             <!--Each image-->
+                            <img src="Carousel\2.jpg" alt="neon-tokyo"      class="carousel-image">
+                            <img src="Carousel\3.jpg" alt="rainbow-canyon"  class="carousel-image">
+                            <img src="Carousel\4.jpg" alt="nessie-photos"   class="carousel-image">
+                            <img src="Carousel\5.jpg" alt="planet-horizons" class="carousel-image">
+                            <img src="Carousel\6.jpg" alt="starry-desert"   class="carousel-image">
+                        </div>
+
+                        <button id="autoplay-button" onclick="toggle()">
+                            <p class="autoplay-text" style="font-size: 15px;">Autoplay</p>
+                            <div id="autoIndicator"></div>
+                        </button>
+                        
+                        <div class="button-box">                                                                <!--The box containing navigation buttons-->
+                            <button class="carousel-button" id="carouselButton0" onclick="setImgNumber(0)" aria-label="image 1"></button>    <!--Update slide in view-->
+                            <button class="carousel-button" id="carouselButton1" onclick="setImgNumber(1)" aria-label="image 2"></button>
+                            <button class="carousel-button" id="carouselButton2" onclick="setImgNumber(2)" aria-label="image 3"></button>
+                            <button class="carousel-button" id="carouselButton3" onclick="setImgNumber(3)" aria-label="image 4"></button>
+                            <button class="carousel-button" id="carouselButton4" onclick="setImgNumber(4)" aria-label="image 5"></button>
+                            <button class="carousel-button" id="carouselButton5" onclick="setImgNumber(5)" aria-label="image 6"></button>
+                        </div>
+
+                    </section>
+                </div>
+
+                
+                <p class="copy">If you have a keyboard, you can navigate with left and right cursor keys, or press <!--Specific guidance on interacting with carousel-->
+                    the number of the image you want. You can also press the space bar to toggle autoplay, which is 
+                    indicated 'on' with the green light and 'off' with the red.<br><br></p>
+            
+            <footer class="footer">                                                                             <!--Footer containing other links that summarise all my periphery work on this application-->
+                <div class="nav-item"><a href="https://codepen.io/eskimofeet/full/rNNvxdj">CodePen project</a></div>
+                <div class="nav-item"><a href="https://docs.google.com/document/d/1Jvvob23ZbaDxfS71kcE3AuZ-A9BfY0peRaHcbH2fNJw/edit?usp=sharing">Free resources</a></div>
+                <div class="nav-item"><a href="https://docs.google.com/document/d/1W0QdeSZcxhr7tMSdev9rpCc4K0jow3uJ2ewUrXXovkI/edit?usp=sharing">FCC notes</a></div>
+                <div class="nav-item"><a href="https://docs.google.com/document/d/1LUB0_cVJp-wHNC7Wz7MtdOmEbbF6cDoka7xFwgrkCfA/edit?usp=sharing" target="_blank">Udemy courses</a></div>
+            </footer>
+            <script>document.getElementById("imageBox").style.left = '0px'</script>
+            <script src="script.js"></script>
+        </div> 
+    </main>
+</html>
