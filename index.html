@@ -1,11 +1,13 @@
 <!--This page structure is based on an initial design which can be found in the Plan folder at https://github.com/jackherizsmith/jackherizsmith.github.io/tree/master/Plan-->
 
+<!DOCTYPE html>
 <head>
+    <title>Jack's FAC Application Website</title>
     <link   rel = "stylesheet" type = "text/css" href = "styles.css">                                   <!--Linking to CSS doc-->
     <link   href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">     <!--Importing a beaut font-->
 </head>
 
-<main>                                                                                                  
+<main lang="en">                                                                                                  
     <nav class="navbar">                                                                                <!--A nav bar fixed to the top of the screen-->
         <nav class="nav-item"><a href="#top"><img src="Logos\home-icon.png" alt="Home" height=50px></a></nav>      <!--Home button, etc-->
         <nav class="nav-item"><a href="#bio">Bio</a></nav>
@@ -28,7 +30,7 @@
         
         <div id="bio" class="hidden"></div>
         <section class="copy">            
-            <p><img class="face" src="Jack-face.jfif">Hey, I'm Jack. Here's my face. I'm applying to join your programme because I believe in the power of technology to make the 
+            <p><img class="face" src="Jack-face.jfif" alt="Jack's face">Hey, I'm Jack. Here's my face. I'm applying to join your programme because I believe in the power of technology to make the 
                 world a better place. Thank you so much for visiting my first ever website that I've built from scratch, which pulls together all the components of the rest of 
                 my application to join the Founders and Coders Spring 2020 cohort - it's a real pleasure to have you here.
             </br> </br>              
@@ -99,12 +101,12 @@
                     </button>
                     
                     <div class="button-box">                                                                <!--The box containing navigation buttons-->
-                        <button class="carousel-button" id="carouselButton0" onclick="setImgNumber(0)"></button>    <!--Update slide in view-->
-                        <button class="carousel-button" id="carouselButton1" onclick="setImgNumber(1)"></button>
-                        <button class="carousel-button" id="carouselButton2" onclick="setImgNumber(2)"></button>
-                        <button class="carousel-button" id="carouselButton3" onclick="setImgNumber(3)"></button>
-                        <button class="carousel-button" id="carouselButton4" onclick="setImgNumber(4)"></button>
-                        <button class="carousel-button" id="carouselButton5" onclick="setImgNumber(5)"></button>
+                        <button class="carousel-button" id="carouselButton0" onclick="setImgNumber(0)" aria-label="image 1"></button>    <!--Update slide in view-->
+                        <button class="carousel-button" id="carouselButton1" onclick="setImgNumber(1)" aria-label="image 2"></button>
+                        <button class="carousel-button" id="carouselButton2" onclick="setImgNumber(2)" aria-label="image 3"></button>
+                        <button class="carousel-button" id="carouselButton3" onclick="setImgNumber(3)" aria-label="image 4"></button>
+                        <button class="carousel-button" id="carouselButton4" onclick="setImgNumber(4)" aria-label="image 5"></button>
+                        <button class="carousel-button" id="carouselButton5" onclick="setImgNumber(5)" aria-label="image 6"></button>
                     </div>
 
                 </section>
